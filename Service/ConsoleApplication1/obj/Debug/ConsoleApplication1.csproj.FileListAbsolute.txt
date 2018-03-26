@@ -30,3 +30,19 @@ C:\Users\Asus\Documents\RetailBankingApp\Service\ConsoleApplication1\bin\Debug\A
 C:\Users\Asus\Documents\RetailBankingApp\Service\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\Users\Asus\Documents\RetailBankingApp\Service\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Asus\Documents\RetailBankingApp\Service\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\DataAccessLayer.dll
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\DTO.dll
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\EntityFramework.dll
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\AutoMapper.dll
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\DTO.pdb
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\EntityFramework.xml
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\bin\Debug\AutoMapper.xml
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

@@ -14,7 +14,7 @@ namespace Service
     {
 
         [OperationContract]
-        int AddCustomer(Customer Customer);
+        long AddCustomer(Customer Customer);
 
        
 

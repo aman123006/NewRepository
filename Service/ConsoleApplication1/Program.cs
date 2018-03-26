@@ -21,7 +21,10 @@ namespace ConsoleApplication1
             City= "amksdcm",
             SSNID=444454444,
             Age=24};
-            op.AddCustomer(c);
+         //   op.AddCustomer(c);
+
+
+            CustomerDTO c1 = op.GetCustomer(1);
         }
     }
 }
