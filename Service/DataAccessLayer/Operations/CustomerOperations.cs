@@ -62,7 +62,7 @@ namespace DataAccessLayer.Operations
                 customer.State = customerDTO.State;
                 customer.SSNID = customerDTO.SSNID;
                 customer.Name = customerDTO.Name;
-                customer.Age = customerDTO.Age;
+                customer.DOB = customerDTO.DOB;
                 db.Entry(customer).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
             }

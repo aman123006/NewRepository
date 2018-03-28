@@ -56,6 +56,19 @@
   <ItemGroup>
     <Compile Include="AutoMapper\MappingProfile.cs" />
     <Compile Include="DatabaseContext\BankDbContext.cs" />
+    <Compile Include="Migrations\201803211839111_InitialCreate.cs" />
+    <Compile Include="Migrations\201803211839111_InitialCreate.Designer.cs">
+      <DependentUpon>201803211839111_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803282035281_cUSTOMER.cs" />
+    <Compile Include="Migrations\201803282035281_cUSTOMER.Designer.cs">
+      <DependentUpon>201803282035281_cUSTOMER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803282041526_CustomerMigration.cs" />
+    <Compile Include="Migrations\201803282041526_CustomerMigration.Designer.cs">
+      <DependentUpon>201803282041526_CustomerMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Operations\CustomerOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +82,17 @@
       <Project>{f996b50c-4836-4bc5-87d0-b768b448db3b}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803211839111_InitialCreate.resx">
+      <DependentUpon>201803211839111_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803282035281_cUSTOMER.resx">
+      <DependentUpon>201803282035281_cUSTOMER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803282041526_CustomerMigration.resx">
+      <DependentUpon>201803282041526_CustomerMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

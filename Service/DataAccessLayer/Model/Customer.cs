@@ -14,8 +14,8 @@ namespace DataAccessLayer.Model
         public int ID { get; set; }
         [Index(IsUnique = true),Range(100000000,System.Int64.MaxValue)]
         public long SSNID { get; set; }
-        //Replace with DOB
-        public int Age { get; set; }
+        
+        public DateTime DOB { get; set; }
         
         public string Name { get; set; }
         

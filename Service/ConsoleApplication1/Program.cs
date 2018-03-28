@@ -20,11 +20,11 @@ namespace ConsoleApplication1
             , State = "000000",
             City= "00000",
             SSNID= 444484444,
-            Age=24};
-         //   op.AddCustomer(c);
+            DOB=DateTime.Now};
+          op.AddCustomer(c);
 
 
-           op.UpdateCustomer(c);
+           //op.UpdateCustomer(c);
         }
     }
 }

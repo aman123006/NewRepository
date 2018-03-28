@@ -12,7 +12,7 @@ namespace DTO
      
         public long SSNID { get; set; }
 
-        public int Age { get; set; }
+        public DateTime DOB { get; set; }
 
         public string Name { get; set; }
 
