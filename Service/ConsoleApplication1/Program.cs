@@ -14,17 +14,17 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             var op = new CustomerOperations();
-            CustomerDTO c = new CustomerDTO() { Name = "AmanDEEP",
-                AddressLine1 = "aSdc",
-                AddressLine2 = "dsdc"
-            , State = "pb",
-            City= "amksdcm",
-            SSNID=444454444,
+            CustomerDTO c = new CustomerDTO() {ID =4, Name = "XYZ",
+                AddressLine1 = "0000",
+                AddressLine2 = "0000"
+            , State = "000000",
+            City= "00000",
+            SSNID= 444484444,
             Age=24};
          //   op.AddCustomer(c);
 
 
-            CustomerDTO c1 = op.GetCustomer(1);
+           op.UpdateCustomer(c);
         }
     }
 }

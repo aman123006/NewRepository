@@ -48,13 +48,21 @@ namespace DataAccessLayer.Operations
             }
 
         //need updation
-        public void UpdateCustomer(int id)
+        public void UpdateCustomer(CustomerDTO customerDTO)
         {
             using (var db = new BankDbContext())
             {
-
-                var customer = db.Customer.FirstOrDefault(x => x.ID == id);
-
+                //TODO : Use Automapper here;
+                
+                var customer = db.Customer.FirstOrDefault(x => x.ID == customerDTO.ID);
+                //  customer =  Mapper.Map<CustomerDTO,Customer>(customerDTO, MappingProfile.ConfigureMap);
+                customer.City = customerDTO.City;
+                customer.AddressLine1 = customerDTO.AddressLine1;
+                customer.AddressLine2 = customerDTO.AddressLine2;
+                customer.State = customerDTO.State;
+                customer.SSNID = customerDTO.SSNID;
+                customer.Name = customerDTO.Name;
+                customer.Age = customerDTO.Age;
                 db.Entry(customer).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
             }

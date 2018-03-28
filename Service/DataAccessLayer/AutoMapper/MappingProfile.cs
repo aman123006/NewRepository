@@ -17,11 +17,17 @@ namespace DataAccessLayer.AutoMapper
           
         }
 
+        public static void ConfigureMap(IMappingOperationOptions<CustomerDTO, Customer> opt)
+        {
+            opt.ConfigureMap()
+               .ForMember(dest => dest.ID, m => m.Ignore());
+}
+
         public static MapperConfiguration Initialize()
         {
             MapperConfiguration config = new MapperConfiguration(cfg => {
                 
-                cfg.CreateMap<CustomerDTO, Customer>();
+                cfg.CreateMap<CustomerDTO, Customer>(); 
                 cfg.CreateMap<Customer, CustomerDTO>();
             });
 
