@@ -16,8 +16,14 @@ namespace Service
         [OperationContract]
         long AddCustomer(Customer Customer);
 
-       
+        [OperationContract]
+        long UpdateCustomer(Customer Customer);
 
+        [OperationContract]
+        long DeleteCustomer(int id);
+
+        [OperationContract]
+        long GetCustomer(int id);
         // TODO: Add your service operations here
     }
 
@@ -27,7 +33,7 @@ namespace Service
     public partial class Customer
     {
         [DataMember]
-        public int ID { get; set; }
+        public long ID { get; set; }
         [DataMember]
         public long SSNID { get; set; }
         [DataMember]

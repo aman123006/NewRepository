@@ -36,7 +36,7 @@ namespace DataAccessLayer.Operations
             }
         }
 
-        public CustomerDTO GetCustomer(int id)
+        public CustomerDTO GetCustomer(long id)
         {
             using (var db = new BankDbContext())
             {
@@ -67,5 +67,19 @@ namespace DataAccessLayer.Operations
                 db.SaveChanges();
             }
         }
+
+        public bool DeleteCustomer(long id)
+        {
+            using (var db = new BankDbContext())
+            {
+                var customer = db.Customer.FirstOrDefault(x => x.ID == id);
+
+                customer.Active = false;
+                db.Entry(customer).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+            return true;
+
+          }
     }
 }

@@ -11,7 +11,7 @@ namespace DataAccessLayer.Model
     public class Customer
     {
         [Key]
-        public int ID { get; set; }
+        public  long ID { get; set; }
         [Index(IsUnique = true),Range(100000000,System.Int64.MaxValue)]
         public long SSNID { get; set; }
         
@@ -26,7 +26,8 @@ namespace DataAccessLayer.Model
         public string City { get; set; }
         
         public string State { get; set; }
+      // see default value decorator
+       public bool Active { get; set; }
 
-        // To Do add inactive flag
     }
 }

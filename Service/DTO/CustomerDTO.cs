@@ -8,7 +8,7 @@ namespace DTO
 {
     public class CustomerDTO
     {
-        public int ID { get; set; }
+        public long ID { get; set; }
      
         public long SSNID { get; set; }
 
@@ -23,5 +23,7 @@ namespace DTO
         public string City { get; set; }
 
         public string State { get; set; }
+
+        public bool Active { get; set; }
     }
 }
