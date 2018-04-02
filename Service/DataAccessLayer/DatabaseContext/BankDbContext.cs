@@ -11,5 +11,6 @@ namespace DataAccessLayer.DatabaseContext
     public class BankDbContext:DbContext
     {
         public DbSet<Customer> Customer { get; set; }
+        public DbSet<Account> Account { get; set; }
     }
 }

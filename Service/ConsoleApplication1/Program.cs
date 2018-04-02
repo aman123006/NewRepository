@@ -19,13 +19,16 @@ namespace ConsoleApplication1
                 AddressLine2 = "0000"
             , State = "000000",
             City= "00000",
-            SSNID= 444984444,
+            SSNID= 444989444,
             DOB=DateTime.Now,
             Active =true
             };
-       //   op.AddCustomer(c);
-            var a = op.GetActiveCustomers();
+            //op.AddCustomer(c);
+            //var a = op.DeleteCustomer(7);
+            AccountDTO acc = new AccountDTO() { Active = true, CustomerId = 8, Type = "Savimngs" };
+            var Aop = new AccountOperations();
 
+            var a = Aop.GetAccountDetails(1);
            //op.UpdateCustomer(c);
         }
     }

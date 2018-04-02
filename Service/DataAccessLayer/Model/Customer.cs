@@ -29,5 +29,14 @@ namespace DataAccessLayer.Model
       // see default value decorator
        public bool Active { get; set; }
 
+        //Update service and DTO Later
+        public string Message { get; set; }
+
+        //check if this serves the purpose  Update service and DTO Later
+        [Timestamp]
+        public byte[] LastUpdated { get; set; }
+        //update service and DTO
+       public List<Account> Accounts { get; set; }
+
     }
 }
