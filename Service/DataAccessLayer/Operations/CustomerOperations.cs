@@ -20,6 +20,17 @@ namespace DataAccessLayer.Operations
             config = MappingProfile.Initialize();
             mapper = config.CreateMapper();
         }
+
+        public List<CustomerDTO> GetActiveCustomers()
+        {
+            using (var db = new BankDbContext())
+            {
+               var customers =  db.Customer.Where(x => x.Active == true).ToList();
+                List<CustomerDTO> CustomerDTOList = customers.Select(y => mapper.Map<Customer, CustomerDTO>(y)).ToList();
+                return CustomerDTOList;
+            }
+
+            }
         public long AddCustomer(CustomerDTO customerDTO)
         {
             using (var db = new BankDbContext())

@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201803282041526_CustomerMigration.Designer.cs">
       <DependentUpon>201803282041526_CustomerMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804020934335_ActiveFlag.cs" />
+    <Compile Include="Migrations\201804020934335_ActiveFlag.Designer.cs">
+      <DependentUpon>201804020934335_ActiveFlag.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Operations\CustomerOperations.cs" />
@@ -92,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803282041526_CustomerMigration.resx">
       <DependentUpon>201803282041526_CustomerMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804020934335_ActiveFlag.resx">
+      <DependentUpon>201804020934335_ActiveFlag.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

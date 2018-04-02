@@ -27,3 +27,9 @@ C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\bin\Microsoft
 C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
 C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\obj\Debug\Service.dll
 C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\obj\Debug\Service.pdb
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\bin\BAL.dll
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\bin\DataAccessLayer.dll
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\bin\DTO.dll
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\bin\BAL.pdb
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\bin\DataAccessLayer.pdb
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\Service\bin\DTO.pdb

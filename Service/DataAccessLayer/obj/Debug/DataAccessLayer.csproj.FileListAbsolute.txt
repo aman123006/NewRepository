@@ -44,3 +44,4 @@ C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\D
 C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.Cache
 C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.cUSTOMER.resources
 C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.CustomerMigration.resources
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.ActiveFlag.resources

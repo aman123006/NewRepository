@@ -48,5 +48,6 @@ namespace Service
         public string City { get; set; }
         [DataMember]
         public string State { get; set; }
+        //ActiveFlag??
      }
 }
