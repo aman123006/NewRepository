@@ -54,8 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountsBAL.cs" />
     <Compile Include="CustomerBAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransactionBAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
