@@ -29,7 +29,17 @@ namespace ConsoleApplication1
             var Aop = new AccountOperations();
 
             var a = Aop.GetActiveAccounts();
-           //op.UpdateCustomer(c);
+            //op.UpdateCustomer(c);
+
+            //var Top = new TransactionOperations();
+            //Top.Deposit(3, 500,"Dep");
+
+            //Top.Withdraw(2, 500, "W");
+
+            //Top.Transfer(2,3,1000);
+
+            var x = Aop.GetAccountStatement(2,1);
+
         }
     }
 }

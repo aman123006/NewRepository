@@ -84,6 +84,14 @@
     <Compile Include="Migrations\201804021425414_Transaction.Designer.cs">
       <DependentUpon>201804021425414_Transaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804021552031_Transaction1.cs" />
+    <Compile Include="Migrations\201804021552031_Transaction1.Designer.cs">
+      <DependentUpon>201804021552031_Transaction1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804021627193_Transaction11.cs" />
+    <Compile Include="Migrations\201804021627193_Transaction11.Designer.cs">
+      <DependentUpon>201804021627193_Transaction11.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Transaction.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Account.cs" />
@@ -124,6 +132,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804021425414_Transaction.resx">
       <DependentUpon>201804021425414_Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804021552031_Transaction1.resx">
+      <DependentUpon>201804021552031_Transaction1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804021627193_Transaction11.resx">
+      <DependentUpon>201804021627193_Transaction11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

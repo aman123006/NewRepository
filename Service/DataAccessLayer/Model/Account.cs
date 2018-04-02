@@ -24,5 +24,8 @@ namespace DataAccessLayer.Model
         [Timestamp]
         public byte[] LastUpdated { get; set; }
 
+        public List<Transaction> Transactions { get; set; }
+
+
     }
 }

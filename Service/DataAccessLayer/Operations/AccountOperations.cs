@@ -91,5 +91,26 @@ namespace DataAccessLayer.Operations
                 return true; // TODO Return ID??
             }
         }
+
+        public List<TransactionDTO> GetAccountStatement(long id, int n)
+        {
+            using (var db = new BankDbContext())
+            {
+                var Account = db.Account.Where(x => x.Id == id).Include(y => y.Transactions).FirstOrDefault();
+                return Account.Transactions.OrderByDescending(x => x.TransactionDTTM).Take(n).Select(y=>  mapper.Map<Transaction, TransactionDTO>(y)).ToList();
+                
+            }
+        }
+
+        public List<TransactionDTO> GetAccountStatement(long id, DateTime start, DateTime end)
+        {
+            using (var db = new BankDbContext())
+            {
+                var Account = db.Account.Include(y => y.Transactions).Where(x => x.Id == id).FirstOrDefault();
+                return Account.Transactions.Where(y => y.TransactionDTTM >= start && y.TransactionDTTM<= end).OrderByDescending(x => x.TransactionDTTM).Select(y => mapper.Map<Transaction, TransactionDTO>(y)).ToList();
+
+            }
+        }
+
     }
 }

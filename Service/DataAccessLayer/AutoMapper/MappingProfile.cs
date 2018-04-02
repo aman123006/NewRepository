@@ -30,8 +30,11 @@ namespace DataAccessLayer.AutoMapper
                 cfg.CreateMap<CustomerDTO, Customer>(); 
                 cfg.CreateMap<Customer, CustomerDTO>();
 
-                cfg.CreateMap<AccountDTO, Account>().ForMember(dest => dest.Customer, m => m.Ignore()); ;
+                cfg.CreateMap<AccountDTO, Account>().ForMember(dest => dest.Customer, m => m.Ignore()); 
                 cfg.CreateMap<Account, AccountDTO>();
+
+                cfg.CreateMap<Transaction, TransactionDTO>();
+                cfg.CreateMap<TransactionDTO, Transaction>();
             });
 
             return config;

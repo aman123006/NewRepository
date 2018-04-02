@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Model
+namespace DTO
 {
-   public class Transaction
+    public class TransactionDTO
     {
-        [Key]
         public long ID { get; set; }
         public long AccountID { get; set; }
         public string TransactionType { get; set; }
@@ -18,7 +16,5 @@ namespace DataAccessLayer.Model
         public long Balance { get; set; }
         public string Comments { get; set; }
         public DateTime TransactionDTTM { get; set; }
-            
-
     }
 }
