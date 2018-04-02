@@ -21,16 +21,50 @@ namespace DataAccessLayer.Operations
             config = MappingProfile.Initialize();
             mapper = config.CreateMapper();
         }
-
+        //Check
         public AccountDTO GetAccountDetails(long id)
         {
             using (var db = new BankDbContext())
             {
-               var debug = db.Account.Where(x => x.Id == id).FirstOrDefault();
-                var x1 = debug.Customer;
-                return mapper.Map<Account, AccountDTO>(db.Account.FirstOrDefault(x => x.Id == id));
+              return mapper.Map<Account, AccountDTO>(db.Account.FirstOrDefault(x => x.Id == id)); // Handle Inactive case in UI or BAL
 
-                    }
+                }
+        }
+
+        public List<AccountDTO> GetAccountDetailsBySSNID(long id)
+        {
+            using (var db = new BankDbContext())
+            {
+               var Accounts = db.Account.Include(x=>x.Customer);
+                var account = Accounts.Where(x => x.Customer.SSNID == id).ToList();
+       
+               return account.Select(y => mapper.Map<Account, AccountDTO>(y)).ToList();
+
+            }
+        }
+
+        public List<AccountDTO> GetAccountDetailsByCustID(long id)
+        {
+            using (var db = new BankDbContext())
+            {
+                var Accounts = db.Account.Where(x => x.CustomerId == id).Include(x => x.Customer).ToList();
+                
+
+                return Accounts.Select(y => mapper.Map<Account, AccountDTO>(y)).ToList();
+
+            }
+        }
+
+        public List<AccountDTO> GetActiveAccounts()
+        {
+            using (var db = new BankDbContext())
+            {
+                var Accounts = db.Account.Where(x => x.Active == true).Include(x => x.Customer).ToList();
+
+
+                return Accounts.Select(y => mapper.Map<Account, AccountDTO>(y)).ToList();
+
+            }
         }
 
         public bool DeleteAccount(long id)
@@ -45,6 +79,7 @@ namespace DataAccessLayer.Operations
             }
         }
 
+        
 
         public bool CreateAccount(AccountDTO acc)
         {

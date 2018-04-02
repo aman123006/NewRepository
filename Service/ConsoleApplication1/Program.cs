@@ -28,7 +28,7 @@ namespace ConsoleApplication1
             AccountDTO acc = new AccountDTO() { Active = true, CustomerId = 8, Type = "Savimngs" };
             var Aop = new AccountOperations();
 
-            var a = Aop.GetAccountDetails(1);
+            var a = Aop.GetActiveAccounts();
            //op.UpdateCustomer(c);
         }
     }

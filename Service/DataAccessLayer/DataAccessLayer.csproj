@@ -80,12 +80,17 @@
     <Compile Include="Migrations\201804021052225_Accout.Designer.cs">
       <DependentUpon>201804021052225_Accout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\AccountDetails.cs" />
+    <Compile Include="Migrations\201804021425414_Transaction.cs" />
+    <Compile Include="Migrations\201804021425414_Transaction.Designer.cs">
+      <DependentUpon>201804021425414_Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Transaction.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Operations\AccountOperations.cs" />
     <Compile Include="Operations\CustomerOperations.cs" />
+    <Compile Include="Operations\TransactionOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804021052225_Accout.resx">
       <DependentUpon>201804021052225_Accout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804021425414_Transaction.resx">
+      <DependentUpon>201804021425414_Transaction.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

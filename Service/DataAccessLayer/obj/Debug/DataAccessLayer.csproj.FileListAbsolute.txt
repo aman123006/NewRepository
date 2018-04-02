@@ -47,3 +47,4 @@ C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\D
 C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.ActiveFlag.resources
 C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.MessageTimestamp.resources
 C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Accout.resources
+C:\Users\Asus\Desktop\RetailBank app\NewRepository\Service\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Transaction.resources
