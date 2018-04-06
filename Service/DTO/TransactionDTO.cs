@@ -12,7 +12,7 @@ namespace DTO
         public long AccountID { get; set; }
         public string TransactionType { get; set; }
         public int? Withdraw { get; set; }
-        public int? Deposit { get; set; }
+        public int Deposit { get; set; }
         public long Balance { get; set; }
         public string Comments { get; set; }
         public DateTime TransactionDTTM { get; set; }

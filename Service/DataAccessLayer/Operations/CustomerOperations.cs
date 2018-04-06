@@ -43,7 +43,7 @@ namespace DataAccessLayer.Operations
 
                 db.Customer.Add(customer);
                 db.SaveChanges();
-                return db.Customer.FirstOrDefault(x => x.SSNID == customer.SSNID).SSNID;
+                return customer.ID;
             }
         }
 

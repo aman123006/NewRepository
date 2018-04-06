@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 using AutoMapper;
 using Service.AutoMapper;
+using BAL;
+using DTO;
 
 namespace Service
 {
@@ -14,30 +11,99 @@ namespace Service
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public Service1()
-        {
-            mapper = config.CreateMapper();
-        }
+        AccountsBAL Abal;
+        CustomerBAL Cbal;
+        TransactionBAL Tbal;
+
         MapperConfiguration config = MappingProfile.Initialize();
         IMapper mapper;
 
+        public Service1()
+        {
+            Abal = new AccountsBAL();
+            Cbal = new CustomerBAL();
+            Tbal = new TransactionBAL();
+
+            mapper = config.CreateMapper();
+        }
+      
+
         public long AddCustomer(Customer Customer)
         {
-            //return mapper.Map<Customer, CustomerDTO>(db.Customer.FirstOrDefault(x => x.ID == id));
-            return 0;
+            return Cbal.AddCustomer(mapper.Map<Customer,CustomerDTO>(Customer));
         }
 
-        public long DeleteCustomer(int id)
+        public bool UpdateCustomer(Customer Customer)
         {
             throw new NotImplementedException();
         }
 
-        public long GetCustomer(int id)
+        public long DeleteCustomer(long id)
         {
             throw new NotImplementedException();
         }
 
-        public long UpdateCustomer(Customer Customer)
+        public Customer GetCustomer(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Customer> GetAllCustomers()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Deposit(long accountId, int amount, string comments = "Deposit")
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Withdraw(long accountId, int amount, string comments = "Withdraw")
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Transfer(long src_accountId, long dest_accountId, int amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Account GetAccountDetails(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Account> GetAccountDetailsBySSNID(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Account> GetAccountDetailsByCustID(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Account> GetActiveAccounts()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteAccount(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public long CreateAccount(Account account)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Transaction> GetAccountStatement(long id, int n)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Transaction> GetAccountStatementByDate(long id, DateTime start, DateTime end)
         {
             throw new NotImplementedException();
         }

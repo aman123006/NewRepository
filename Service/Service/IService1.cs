@@ -17,14 +17,44 @@ namespace Service
         long AddCustomer(Customer Customer);
 
         [OperationContract]
-        long UpdateCustomer(Customer Customer);
+        bool UpdateCustomer(Customer Customer);
 
         [OperationContract]
-        long DeleteCustomer(int id);
+        long DeleteCustomer(long id);
 
         [OperationContract]
-        long GetCustomer(int id);
-        // TODO: Add your service operations here
+        Customer GetCustomer(long id);
+
+        [OperationContract]
+        List<Customer> GetAllCustomers();
+
+        [OperationContract]
+        void Deposit(long accountId, int amount, string comments = "Deposit");
+
+        [OperationContract]
+        void Withdraw(long accountId, int amount, string comments = "Withdraw");
+
+        [OperationContract]
+        void Transfer(long src_accountId, long dest_accountId, int amount);
+
+
+        [OperationContract]
+        Account GetAccountDetails(long id);
+        [OperationContract]
+        List<Account> GetAccountDetailsBySSNID(long id);
+        [OperationContract]
+        List<Account> GetAccountDetailsByCustID(long id);
+        [OperationContract]
+        List<Account> GetActiveAccounts();
+        [OperationContract]
+        bool DeleteAccount(long id);
+        [OperationContract]
+        long CreateAccount(Account account);
+        [OperationContract]
+        List<Transaction> GetAccountStatement(long id, int n);
+        [OperationContract]
+        List<Transaction> GetAccountStatementByDate(long id, DateTime start, DateTime end);
+        
     }
 
 
@@ -37,7 +67,7 @@ namespace Service
         [DataMember]
         public long SSNID { get; set; }
         [DataMember]
-        public int Age { get; set; }
+        public DateTime DOB { get; set; }
         [DataMember]
         public string Name { get; set; }
         [DataMember]
@@ -48,6 +78,37 @@ namespace Service
         public string City { get; set; }
         [DataMember]
         public string State { get; set; }
-        //ActiveFlag??
+        
      }
+
+    [DataContract]
+    public partial class Account
+    {
+        [DataMember]
+        public long Id { get; set; }
+        [DataMember]
+        public long CustomerId { get; set; }
+        [DataMember]
+        public Customer Customer { get; set; }
+        [DataMember]
+        public long Balance { get; set; }
+       
+        [DataMember]
+        public string Type { get; set; }
+
+    }
+
+    [DataContract]
+    public partial class Transaction
+    {
+        public long ID { get; set; }
+        public long AccountID { get; set; }
+        public string TransactionType { get; set; }
+        public int? Withdraw { get; set; }
+        public int? Deposit { get; set; }
+        public long Balance { get; set; }
+        public string Comments { get; set; }
+        public string Date { get ; set; } // automapeer
+
+    }
 }

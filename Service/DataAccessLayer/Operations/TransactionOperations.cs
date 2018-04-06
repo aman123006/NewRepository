@@ -10,7 +10,7 @@ namespace DataAccessLayer.Operations
 {
    public class TransactionOperations
     {
-        public void Deposit(long accountId, int amount, string comments)
+        public void Deposit(long accountId, int amount, string comments  = "Deposit")
         {// use transactions
             using (var db = new BankDbContext())
             {
@@ -33,7 +33,7 @@ namespace DataAccessLayer.Operations
         }
 
 
-        public void Withdraw(long accountId, int amount, string comments)
+        public void Withdraw(long accountId, int amount, string comments = "Withdraw")
         {// use transactions
             using (var db = new BankDbContext())
             {
@@ -58,10 +58,10 @@ namespace DataAccessLayer.Operations
 
         public void Transfer(long src_accountId,long dest_accountId, int amount)
         {// use transactions, Update, See return Things
-
-            Withdraw(src_accountId, amount, "Transfered to" + dest_accountId);
-            Deposit(dest_accountId, amount, "Transfered from "+ src_accountId);
-
+           
+                Withdraw(src_accountId, amount, "Transfered to" + dest_accountId);
+                Deposit(dest_accountId, amount, "Transfered from " + src_accountId);
+            
         }
 
 

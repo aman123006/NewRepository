@@ -21,12 +21,12 @@ namespace DataAccessLayer.Operations
             config = MappingProfile.Initialize();
             mapper = config.CreateMapper();
         }
-        //Check
+     
         public AccountDTO GetAccountDetails(long id)
         {
             using (var db = new BankDbContext())
             {
-              return mapper.Map<Account, AccountDTO>(db.Account.FirstOrDefault(x => x.Id == id)); // Handle Inactive case in UI or BAL
+              return mapper.Map<Account, AccountDTO>(db.Account.FirstOrDefault(x => x.Id == id)); 
 
                 }
         }
@@ -81,14 +81,14 @@ namespace DataAccessLayer.Operations
 
         
 
-        public bool CreateAccount(AccountDTO acc)
+        public long CreateAccount(AccountDTO acc)
         {
             using (var db = new BankDbContext())
             {
                 Account a = mapper.Map<AccountDTO, Account>(acc);
                 db.Account.Add(a);
                 db.SaveChanges();
-                return true; // TODO Return ID??
+                return a.Id;
             }
         }
 

@@ -19,16 +19,16 @@ namespace ConsoleApplication1
                 AddressLine2 = "0000"
             , State = "000000",
             City= "00000",
-            SSNID= 444989444,
+            SSNID= 444989944,
             DOB=DateTime.Now,
             Active =true
             };
-            //op.AddCustomer(c);
+            long id = op.AddCustomer(c);
             //var a = op.DeleteCustomer(7);
-            AccountDTO acc = new AccountDTO() { Active = true, CustomerId = 8, Type = "Savimngs" };
-            var Aop = new AccountOperations();
+           // AccountDTO acc = new AccountDTO() { Active = true, CustomerId = 8, Type = "Savimngs" };
+           // var Aop = new AccountOperations();
 
-            var a = Aop.GetActiveAccounts();
+         //   var a = Aop.GetActiveAccounts();
             //op.UpdateCustomer(c);
 
             //var Top = new TransactionOperations();
@@ -38,7 +38,7 @@ namespace ConsoleApplication1
 
             //Top.Transfer(2,3,1000);
 
-            var x = Aop.GetAccountStatement(2,1);
+         //   var x = Aop.GetAccountStatement(2,1);
 
         }
     }
